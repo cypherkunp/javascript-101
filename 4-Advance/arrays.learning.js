@@ -51,3 +51,12 @@ var improvedDonuts = donuts.map(function (donut) {
     donut = donut.toUpperCase();
     return donut;
 });
+
+var someArry = [];
+someArry[10] = 1;
+someArry[1] = 10;
+console.log(someArry[0]);
+console.log(someArry[1]);
+someArry.forEach(function (value, index) {
+    console.log(index + ":" + value);
+});

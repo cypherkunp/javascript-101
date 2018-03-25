@@ -1,3 +1,7 @@
+/**
+ * Programming Quiz: Write a function that bubble sorts an array in both ascending and descending order based on input.
+ * @author devvratio.github.com
+ */
 function bubbleSort(array, isAscendingOrder) {
     let isSorted = false;
     function swap(x, y) {

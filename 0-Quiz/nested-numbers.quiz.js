@@ -1,12 +1,11 @@
-/*
- * Programming Quiz: Nested Numbers (6-10)
- *
+/**
+ * Programming Quiz: Nested Numbers
  *   - The `numbers` variable is an array of arrays.
  *   - Use a nested `for` loop to cycle through `numbers`.
  *   - Convert each even number to the string "even"
  *   - Convert each odd number to the string "odd"
+ * @author devvratio.github.com
  */
-
 var numbers = [
     [243, 12, 23, 12, 45, 45, 78, 66, 223, 3],
     [34, 2, 1, 553, 23, 4, 66, 23, 4, 55],

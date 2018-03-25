@@ -1,16 +1,4 @@
-/*
-JavaScript hoists function declarations and variable declarations to the top of the current scope.
-Variable assignments are not hoisted.
-Declare functions and variables at the top of your scripts, so the syntax and behavior are consistent with each other.
-*/
-
-
-
-/* 
-When a function is stored inside a variable it's called a function expression.
-otherwise its called as a function declaration.
-*/
-
+// function expression:
 var catSays = function (max) {
     var catMessage = "";
     for (var i = 0; i < max; i++) {
@@ -18,33 +6,9 @@ var catSays = function (max) {
     }
     return catMessage;
 };
-
-/*
-It's an anonymous function, a function with no name, and you've stored it in a variable called catSays.
-And, if you try accessing the value of the variable catSays, you'll even see the function returned back to you.
-
-All function declarations are hoisted and loaded before the script is actually run.
-
-Function expressions are not hoisted, since they involve variable assignment,
-and only variable declarations are hoisted. 
-The function expression will not be loaded until the interpreter reaches it in the script.
-
-*/
-
 console.log(catSays(10));
 
-/*
-
-Functions as parameters
-Being able to store a function in a variable makes it really simple to pass the function into another function. 
-A function that is passed into another function is called a callback. Let's say you had a helloCat() function, 
-and you wanted it to return "Hello" followed by a string of "meows" like you had with catSays. Well, rather than 
-redoing all of your hard work, you can make helloCat() accept a callback function, and pass in catSays.
-
-*/
-
 console.log('\n --------- \n');
-
 
 // function declaration helloCat accepting a callback
 function helloCat(callbackFunc) {
@@ -59,9 +23,6 @@ console.log(helloCat(catSays));
 
 Named function expressions
 Inline function expressions
-A function expression is when a function is assigned to a variable. And, in JavaScript,
- this can also happen when you pass a function inline as an argument to another function. 
- Take the favoriteMovie example for instance:
 */
 
 // Function expression that assigns the function displayFavorite 
@@ -106,3 +67,20 @@ you saw in the examples above. However, when you know the function is not going 
  you many lines of code to just define it inline.
 
 */
+
+// The Function constructor
+var multiplyTwoNumbers = new Function("a", "b", "return a * b");
+console.log('a*b is > ' + multiplyTwoNumbers(2,3));
+
+// The argument object
+function sumAll() {
+    var i;
+    var sum = 0;
+    for (i = 0; i < arguments.length; i++) {
+        sum += arguments[i];
+    }
+    return sum;
+}
+x = sumAll(1, 123, 500, 115, 44, 88);
+console.log('Sum of all the numbers is > ', x);
+

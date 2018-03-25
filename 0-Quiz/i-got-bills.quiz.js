@@ -1,5 +1,5 @@
-/*
- * Programming Quiz: I Got Bills (6-9)
+/**
+ * Programming Quiz: I Got Bills
  *
  * Use the .map() method to take the bills array below and create a second array
  * of numbers called totals. The totals array should contains each amount from the
@@ -12,6 +12,7 @@
  * Things to note:
  *  - each entry in the totals array must be a number
  *  - each number must have an accuracy of two decimal points
+ * @author devvratio.github.com
  */
 
 var bills = [50.23, 19.12, 34.01,
