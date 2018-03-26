@@ -4,9 +4,9 @@
  */
 var startTimeInMS = 0;
 var stopTimeInMS = 0;
-var nthFibValue = 10;
+var n = 5; //nth fibonacci
 
-// UN-OPTIMIZED RECURSION APPROACH
+// APPROACH 1: UN-OPTIMIZED RECURSION
 function getNthFibonacciUOP(n) {
     var f = 0;
     if (n <= 2) {
@@ -15,29 +15,21 @@ function getNthFibonacciUOP(n) {
         return getNthFibonacciUOP(n - 1) + getNthFibonacciUOP(n - 2);
     }
 }
-startTimeInMS = getTimeStamp();
-console.log(getNthFibonacciUOP(nthFibValue));
-stopTimeInMS = getTimeStamp();
-console.log('Time taken to get the nth fibonacci using recursion is > ' + timeDiff(startTimeInMS, stopTimeInMS));
 
-// MEMOIZATION APPROACH
-var mem = [1,1];
+// APPROACH 2: MEMOIZATION
+var mem = [1, 1];
 function getNthFibonacciMEM(n) {
     var fib = 0;
-    if (mem[n-1] || n<=2) {
-        return mem[n-1];
+    if (mem[n - 1] || n <= 2) {
+        return mem[n - 1];
     } else {
         fib = getNthFibonacciMEM(n - 1) + getNthFibonacciMEM(n - 2);
-        mem[n-1] = fib;
+        mem[n - 1] = fib;
         return fib;
     }
 }
-startTimeInMS = getTimeStamp();
-console.log(getNthFibonacciMEM(nthFibValue));
-stopTimeInMS = getTimeStamp();
-console.log('Time taken to get the nth fibonacci using memoization approach is > ' + timeDiff(startTimeInMS, stopTimeInMS));
 
-// BOTTOM - UP APPROACH
+// APPROACH 3: BOTTOM - UP
 var fibArray = [];
 function getNthFibonacciBUP(n) {
     for (let i = 0; i < n; i++) {
@@ -49,11 +41,24 @@ function getNthFibonacciBUP(n) {
     }
     return fibArray[n - 1];
 }
+
+// getting the nth fib using the approach 1 - Recursion
 startTimeInMS = getTimeStamp();
-console.log(getNthFibonacciBUP(nthFibValue));
+console.log(getNthFibonacciUOP(n));
+stopTimeInMS = getTimeStamp();
+console.log('Time taken to get the nth fibonacci using recursion is > ' + timeDiff(startTimeInMS, stopTimeInMS));
+
+// getting the nth fib using the approach 2 - Memoization
+startTimeInMS = getTimeStamp();
+console.log(getNthFibonacciMEM(n));
+stopTimeInMS = getTimeStamp();
+console.log('Time taken to get the nth fibonacci using memoization approach is > ' + timeDiff(startTimeInMS, stopTimeInMS));
+
+// getting the nth fib using the approach 3 - using the bottom-up 
+startTimeInMS = getTimeStamp();
+console.log(getNthFibonacciBUP(n));
 stopTimeInMS = getTimeStamp();
 console.log('Time taken to get the nth fibonacci using bottom up approach is > ' + timeDiff(startTimeInMS, stopTimeInMS));
-
 
 // HELPER METHODS
 function timeDiff(startTime, stopTime) {

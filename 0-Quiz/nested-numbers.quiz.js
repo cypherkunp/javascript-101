@@ -23,7 +23,7 @@ var odd = "";
 for (let row = 0; row < numbers.length; row++) {
     for (let col = 0; col < numbers[row].length; col++) {
         const element = numbers[row][col];
-        if (element%2 === 0){
+        if (element % 2 === 0) {
             even += element + " ";
         } else {
             odd += element + " ";

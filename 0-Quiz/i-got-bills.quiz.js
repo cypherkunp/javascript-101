@@ -22,9 +22,8 @@ var bills = [50.23, 19.12, 34.01,
 
 var totalBill = bills.map(function (bill) {
     bill += bill * .15;
-    bill = Number.parseFloat(bill).toFixed(2);   
+    bill = Number.parseFloat(bill).toFixed(2);
     return bill;
 });
 
 console.log(totalBill.toString());
-    
