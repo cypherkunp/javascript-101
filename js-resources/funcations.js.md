@@ -79,3 +79,24 @@ functionName(parameter1, parameter2, parameter3) {
 - Because of this, objects will behave like they are passed by reference:
     - If a function changes an object property, it changes the original value.
 - __Changes to object properties are visible (reflected) outside the function.__
+
+
+### The JavaScript call() Method
+- The call() method is a predefined JavaScript function method.
+- It can be used to invoke (call) a function with an owner object as the first argument (parameter).
+- With call(), you can use a method belonging to another object.
+- This example calls the fullName function of person, but is using it on myObject:
+```
+var person = {
+    firstName:"John",
+    lastName: "Doe",
+    fullName: function() {
+        return this.firstName + " " + this.lastName;
+    }
+}
+var myObject = {
+    firstName:"Mary",
+    lastName: "Doe",
+}
+person.fullName.call(myObject);  // Will return "Mary Doe"
+```

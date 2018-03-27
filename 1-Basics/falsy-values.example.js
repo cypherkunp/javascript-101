@@ -1,3 +1,14 @@
+/*
+Here’s the list of all of the falsy values:
+the Boolean value false
+the null type
+the undefined type
+the number 0
+the empty string ""
+the odd value NaN(stands for "not a number", check out the NaN MDN article)
+That's right, there are only six falsy values in all of JavaScript!
+*/
+
 //check for all falsy values such as: undefined, null, '', 0, false:
 if (someVariable) {
     // When someVariable is defined

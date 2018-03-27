@@ -15,7 +15,7 @@ function getNthFibonacciUOP(n) {
         return getNthFibonacciUOP(n - 1) + getNthFibonacciUOP(n - 2);
     }
 }
-
+    
 // APPROACH 2: MEMOIZATION
 var mem = [1, 1];
 function getNthFibonacciMEM(n) {

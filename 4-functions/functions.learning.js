@@ -20,7 +20,6 @@ console.log(helloCat(catSays));
 
 
 /*
-
 Named function expressions
 Inline function expressions
 */
