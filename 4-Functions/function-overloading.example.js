@@ -9,15 +9,25 @@ function foo(a, b, opts) {
     if (opts === undefined) {
         opts = new Object();
     }
-    console.log('opts.isCSV:' + opts.isCSV);
-    console.log('opts.fileName: ' + opts.fileName);
-    console.log('opts.newProperty: ' + opts.newProperty);
-
+    try {
+        console.log('opts.isCSV:' + opts.isCSV);
+        console.log('opts.fileName: ' + opts.fileName);
+        console.log('opts.newProperty: ' + opts.meta.type);
+    } catch (error) {
+        console.log('[Error] ', error.message);
+    }
 }
 
 var exportFileName = "MyFile";
-
-foo(1, 2, { "isCSV": "true", "fileName": exportFileName });
+console.log('\nCalling foo with values 1,2, obj >');
+foo(1, 2, {
+    "isCSV": "true",
+    "fileName": exportFileName,
+    "meta": {
+        "type": "text"
+    }
+});
+console.log('\nCalling foo with values 2, 4, undefined >');
 foo(2, 4, undefined);
 
 
@@ -25,16 +35,16 @@ foo(2, 4, undefined);
 
 function sum(x, y, z, k) {
     let sum = 0;
-    if (x) {
+    if (x != undefined) {
         sum += x;
     }
-    if (y) {
+    if (y != undefined) {
         sum += y;
     }
-    if (z) {
+    if (z != undefined) {
         sum += z;
     }
-    if (k) {
+    if (k != undefined) {
         //TODO
     }
     return sum;
