@@ -9,3 +9,6 @@
 
 ### Blogs
 1. [ECMAScript 6 — New Features: Overview & Comparison](http://es6-features.org)
+
+### Online Courses
+1. [MDN web docs by Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript)

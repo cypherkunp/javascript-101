@@ -4,7 +4,7 @@
 */
 
 function mySandwich(param1, param2, callback) {
-    console.log('Started eating my sandwich.\n');
+    console.log('\nStarted eating my sandwich.\n');
 
     if (param1) {
         console.log(`It has: ${param1}\n`);
@@ -20,5 +20,10 @@ function mySandwich(param1, param2, callback) {
 }
 
 mySandwich('ham', 'cheese', function () {
-    console.log('Finished eating my sandwich.');
+    console.log('Finished eating my ham sandwich.');
+});
+
+// using arrows function
+mySandwich('chicken', 'cheese', () => {
+    console.log('Finished eating my chicken sandwich.');
 });
