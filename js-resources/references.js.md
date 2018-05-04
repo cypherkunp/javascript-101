@@ -1,7 +1,8 @@
-## References
+# References
 
 ### Books
 1. [You Don't Know JS: Up & Going | by Kyle Simpson](https://www.gitbook.com/book/patrickfatrick/you-don-t-know-js-up-going/details)
+    - [Github link](https://github.com/getify/You-Dont-Know-JS)
 2. [Principles of Object-Oriented JavaScript | by Nicholas C. Zakas](https://nostarch.com/oojs)
 
 ### YouTube

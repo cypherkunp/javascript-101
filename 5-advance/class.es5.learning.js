@@ -1,4 +1,4 @@
-// defining a class
+// defining a class 
 function Plane(seatingCapacity) {
     this.wings = 2;
     this.speed = 100;
