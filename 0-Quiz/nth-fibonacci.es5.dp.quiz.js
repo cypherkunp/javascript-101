@@ -1,6 +1,6 @@
 /**
  * Programming Quiz: Find the nth fibonacci number using the dynamic programming techniques.
- * @author devvratio.github.com
+ * @author devvratshukla.github.io
  */
 var startTimeInMS = 0;
 var stopTimeInMS = 0;
@@ -15,7 +15,7 @@ function getNthFibonacciUOP(n) {
         return getNthFibonacciUOP(n - 1) + getNthFibonacciUOP(n - 2);
     }
 }
-    
+
 // APPROACH 2: MEMOIZATION
 var mem = [1, 1];
 function getNthFibonacciMEM(n) {
@@ -54,7 +54,7 @@ console.log(getNthFibonacciMEM(n));
 stopTimeInMS = getTimeStamp();
 console.log('Time taken to get the nth fibonacci using memoization approach is > ' + timeDiff(startTimeInMS, stopTimeInMS));
 
-// getting the nth fib using the approach 3 - using the bottom-up 
+// getting the nth fib using the approach 3 - using the bottom-up
 startTimeInMS = getTimeStamp();
 console.log(getNthFibonacciBUP(n));
 stopTimeInMS = getTimeStamp();

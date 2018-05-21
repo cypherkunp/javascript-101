@@ -1,11 +1,12 @@
 /*
 Here’s the list of all of the falsy values:
-the Boolean value false
-the null type
-the undefined type
-the number 0
-the empty string ""
-the odd value NaN(stands for "not a number", check out the NaN MDN article)
+1. the Boolean value false
+2. the null type
+3. the undefined type
+4. the number 0
+5. the empty string ""
+6. the odd value NaN(stands for "not a number", check out the NaN MDN article)
+
 That's right, there are only six falsy values in all of JavaScript!
 */
 
