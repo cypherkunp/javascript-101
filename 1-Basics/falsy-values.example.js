@@ -1,4 +1,4 @@
-/*
+/**
 Here’s the list of all of the falsy values:
 1. the Boolean value false
 2. the null type
@@ -6,6 +6,14 @@ Here’s the list of all of the falsy values:
 4. the number 0
 5. the empty string ""
 6. the odd value NaN(stands for "not a number", check out the NaN MDN article)
+
+Any value that’ s not on this“ falsy” list is“ truthy.”Here are some examples of those:
+- "hello"
+- 42
+- true
+- [], [1, "2", 3](arrays)
+- {}, {a: 42}(objects)
+- function foo() {..}(functions)
 
 That's right, there are only six falsy values in all of JavaScript!
 */
