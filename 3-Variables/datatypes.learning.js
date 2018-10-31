@@ -37,5 +37,31 @@ console.log(Object.getOwnPropertySymbols(obj)); // [ Symbol(), Symbol() ]
 console.log("---------------------");
 
 // OBJECT
-var objVar = {};
+var objVar = {
+    a: "hello world",
+    b: 42,
+    c: true
+};
+
 console.log('typeof objVar > ' + typeof objVar);
+
+console.log(objVar.a); // "hello world"
+console.log(objVar.b); // 42
+console.log(objVar.c); // true
+
+console.log(objVar["a"]); // "hello world"
+console.log(objVar["b"]); // 42
+console.log(objVar["c"]); // true
+
+// Built-In Type Methods
+
+var stringVar = "Hello World";
+var floatVar = 3.14159;
+
+console.log('-----------------');
+console.log(stringVar.length);
+console.log(stringVar.toUpperCase());
+console.log(floatVar.toFixed(4));
+console.log('-----------------');
+
+
