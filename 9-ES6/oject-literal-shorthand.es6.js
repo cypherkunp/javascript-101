@@ -2,6 +2,7 @@ let type = 'quartz';
 let color = 'rose';
 let carat = 21.29;
 
+// Object literal syntax
 const gemstone = {
     type: type,
     color: color,
@@ -20,7 +21,6 @@ console.log(gemstone.calculateWorth());
 gemstone.sayHello();
 
 // New way using Object Literal Shorthand
-
 const gemstoneNew = {
     type,
     color,
