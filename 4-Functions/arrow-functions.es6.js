@@ -68,8 +68,10 @@ getCode('Dev');
 
 
 // When you are returning a value then you must use curly braces:
-
-const squares = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(square => { return square * square; });
+console.log('\nPrinting the squares of the number using arrow function >');
+const numbers =  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(...numbers);
+const squares =numbers.map(number => { return number * number; });
 console.log(...squares);
 
 /*
