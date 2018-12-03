@@ -54,3 +54,29 @@ console.log('Sum of x is > ' + sum(1));
 console.log('Sum of x and y is > ' + sum(1, 2));
 console.log('Sum of x, y and z is > ' + sum(1, 2, 3));
 
+// Way 3 - THE BEST WAY - Using the arguments object
+
+/**
+The Arguments Object
+JavaScript functions have a built - in object called the arguments object.
+
+The argument object contains an array of the arguments used when the
+function was called(invoked).
+
+This way you can simply use a function to find(for instance) the highest value in a list of numbers:
+Example >
+
+x = findMax(1, 123, 500, 115, 44, 88);
+*/
+
+function findMax() {
+    var i;
+    var max = -Infinity;
+    for (i = 0; i < arguments.length; i++) {
+        if (arguments[i] > max) {
+            max = arguments[i];
+        }
+    }
+    return max;
+}
+console.log(`Max is > ${findMax(1, 123, 500, 115, 44, 88)}`);

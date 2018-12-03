@@ -1,3 +1,18 @@
+/**
+ * There are six data types that are primitive as of ES6 and these are passed by value::
+ * 1. Boolean
+ * 2. Number
+ * 3. Null
+ * 4. Undefined
+ * 5. String
+ * 6. Symbol
+ * 
+ * And, there are 3 data types that are pass by reference:
+ * 1. Object
+ * 2. Arrays
+ * 3. Function 
+ */
+
 // BOOLEAN
 var booleanVar = true;
 console.log('typeof booleanVar > ' + typeof booleanVar);

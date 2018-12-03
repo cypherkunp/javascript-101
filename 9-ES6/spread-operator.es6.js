@@ -15,6 +15,24 @@ console.log(...primes);
 const fruits = ["apples", "bananas", "pears"];
 const vegetables = ["corn", "potatoes", "carrots"];
 
-const produce = [...fruits, ...vegetables];
+// you can also add new values to the concatenated array
+const produce = [...fruits, 'brinjal', ...vegetables];
 
 console.log(produce);
+
+// Spread on objects
+const about = {
+    name: 'Devvrat'
+};
+const details = {
+    job: 'Software Engineer'
+};
+
+const combinedObject = { ...about,
+    ...details,
+    location: 'India'
+};
+console.log(combinedObject);
+
+const clonedObject = { ...combinedObject};
+console.log(clonedObject);

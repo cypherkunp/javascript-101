@@ -1,3 +1,4 @@
+
 /**
  * Objects can be defined using two ways:
  * 1. Using object literal -> {}
@@ -64,7 +65,7 @@ for (const key in Phone) {
 
 console.log('\nProperties of the Phone are (Object.keys() and for-of loop):');
 // Using object.keys
-phoneKeysArray = Object.keys(Phone);
+var phoneKeysArray = Object.keys(Phone);
 // Looping Through Object Properties using for-of loop for arrays
 for (const key of phoneKeysArray) {
     console.log(`${key} : ${Phone[key]}`);
