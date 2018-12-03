@@ -42,7 +42,7 @@ class Train{
         this.numEngines = numEngines;
         this.enginesActive = false;
     }
-
+    
     startEngines(){
         console.log(`starting ${this.name}'s ${this.numEngines} engines...`);
         this.enginesActive = true;
@@ -76,3 +76,19 @@ All code that's needed for the class is contained in the class declaration.
 Instead of having the constructor function in one place,
 then adding methods to the prototype one-by-one, you can do everything all at once!
 */
+
+// Inheritance: Extending a class using ES6
+
+class BulletTrain extends Train {
+    constructor(name, numEngines, topSpeed) {
+        super(name, numEngines);
+        this.topSpeed = topSpeed;
+    }
+    speed(){
+        console.log(`Top speed is: ${this.topSpeed}km/hr`);
+    }
+}
+
+const btrain = new BulletTrain('Rajdhani', 4, 300);
+btrain.startEngines();
+btrain.speed();
