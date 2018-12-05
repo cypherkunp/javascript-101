@@ -8,13 +8,13 @@ console.log(gold.z);
 
 // one time copy
 
-var blue = extend({}, gold);
+/* var blue = extend({}, gold);
 blue.b = 2;
 
 console.log(blue.a);
 console.log(blue.b);
 console.log(blue.z);
-
+ */
 // prototype chain look up
 
 var rose = Object.create(gold);
