@@ -1,7 +1,8 @@
 /*
 Static methods
-To add a static method, the keyword static is placed in front of the method name.
-Look at the badWeather() method in the code below:
+- To add a static method, the keyword static is placed in front of the method name.
+- Look at the badWeather() method in the code below:
+- Using static methods we create utility methods that are not tied to an object.
 */
 
 class Plane {
