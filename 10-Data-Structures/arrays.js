@@ -33,36 +33,36 @@
 /**
  Array Methods
  Method Description
- concat() - Joins two or more arrays, and returns a copy of the joined arrays
- copyWithin() - Copies array elements within the array, to and from specified positions
- entries() - Returns a key / value pair Array Iteration Object
- every() - Checks if every element in an array pass a test
- fill() - Fill the elements in an array with a static value
- filter() - Creates a new array with every element in an array that pass a test
- find() - Returns the value of the first element in an array that pass a test
- findIndex() - Returns the index of the first element in an array that pass a test
- forEach() - Calls a function for each array element
- from() - Creates an array from an object
- includes() - Check if an array contains the specified element
- indexOf() - Search the array for an element and returns its position
- isArray() - Checks whether an object is an array
- join() - Joins all elements of an array into a string
- keys() - Returns a Array Iteration Object, containing the keys of the original array
- lastIndexOf() - Search the array for an element, starting at the end, and returns its position
- map() - Creates a new array with the result of calling a function for each array element
- pop() - Removes the last element of an array, and returns that element
- push() - Adds new elements to the end of an array, and returns the new length
- reduce() - Reduce the values of an array to a single value(going left - to - right)
- reduceRight() - Reduce the values of an array to a single value(going right - to - left)
- reverse() - Reverses the order of the elements in an array
- shift() - Removes the first element of an array, and returns that element
- slice() - Selects a part of an array, and returns the new array
- some() - Checks if any of the elements in an array pass a test
- sort() - Sorts the elements of an array
- splice() - Adds / Removes elements from an array
- toString() - Converts an array to a string, and returns the result
- unshift() - Adds new elements to the beginning of an array, and returns the new length
- valueOf() - Returns the primitive value of an array
+ concat() Joins two or more arrays, and returns a copy of the joined arrays
+ copyWithin() Copies array elements within the array, to and from specified positions
+ entries() Returns a key / value pair Array Iteration Object
+ every() Checks if every element in an array pass a test
+ fill() Fill the elements in an array with a static value
+ filter() Creates a new array with every element in an array that pass a test
+ find() Returns the value of the first element in an array that pass a test
+ findIndex() Returns the index of the first element in an array that pass a test
+ forEach() Calls a function for each array element
+ from() Creates an array from an object
+ includes() Check if an array contains the specified element
+ indexOf() Search the array for an element and returns its position
+ isArray() Checks whether an object is an array
+ join() Joins all elements of an array into a string
+ keys() Returns a Array Iteration Object, containing the keys of the original array
+ lastIndexOf() Search the array for an element, starting at the end, and returns its position
+ map() Creates a new array with the result of calling a function for each array element
+ pop() Removes the last element of an array, and returns that element
+ push() Adds new elements to the end of an array, and returns the new length
+ reduce() Reduce the values of an array to a single value(going left - to - right)
+ reduceRight() Reduce the values of an array to a single value(going right - to - left)
+ reverse() Reverses the order of the elements in an array
+ shift() Removes the first element of an array, and returns that element
+ slice() Selects a part of an array, and returns the new array
+ some() Checks if any of the elements in an array pass a test
+ sort() Sorts the elements of an array
+ splice() Adds / Removes elements from an array
+ toString() Converts an array to a string, and returns the result
+ unshift() Adds new elements to the beginning of an array, and returns the new length
+ valueOf() Returns the primitive value of an array
  */
 var array = [1, 2, 3, 4];
 
@@ -71,7 +71,7 @@ console.log(`Array initialized > ${array}`);
 array.push(5);
 console.log(`Array after pushing 5 > ${array}`);
 
-array.pop() - ;
+array.pop();
 console.log(`Array after pop > ${array}`);
 
 var iOf4 = array.indexOf(4);
@@ -81,82 +81,94 @@ console.log(`i of 4 in the array > ${iOf4}`);
 var iOf5 = array.indexOf(5);
 console.log(`i of 5 in the array > ${iOf5}`);
 
-// Using Array.map() -
-var nameList = ['Steve', 'Bill', 'Jack', 'Elon'];
-var nameListLowerCase = nameList.map((name) => {
-    return name.toLowerCase() - ;
-})
-console.log('\n----Array.map() -----');
+// Using Array.map()
+var nameList = ["Steve", "Bill", "Jack", "Elon"];
+var nameListLowerCase = nameList.map(name => {
+  return name.toLowerCase();
+});
+console.log("\n----Array.map()----");
 console.log(`Name List original > ${nameList}`);
 console.log(`Name List lower case > ${nameListLowerCase}`);
 
 // Filtering in an array
-var authors = [{
-        name: 'Jack',
-        sections: ['technology', 'sports']
-    },
-    {
-        name: 'Steve',
-        sections: ['sports', 'business']
-    },
-    {
-        name: 'bill',
-        sections: ['finance', 'business']
-    },
-    {
-        name: 'Mark',
-        sections: ['advertising', 'business']
-    }
-]
+var authors = [
+  {
+    name: "Jack",
+    sections: ["technology", "sports"]
+  },
+  {
+    name: "Steve",
+    sections: ["sports", "business"]
+  },
+  {
+    name: "bill",
+    sections: ["finance", "business"]
+  },
+  {
+    name: "Mark",
+    sections: ["advertising", "business"]
+  }
+];
 
 function whoWritesFor(section) {
-    let sectionsArray = [];
-    for (let i = 0; i < authors.length; i++) {
-        if (authors[i].sections.indexOf(section) >= 0) {
-            sectionsArray.push(authors[i].name);
-        }
+  let sectionsArray = [];
+  for (let i = 0; i < authors.length; i++) {
+    if (authors[i].sections.indexOf(section) >= 0) {
+      sectionsArray.push(authors[i].name);
     }
-    return sectionsArray;
+  }
+  return sectionsArray;
 }
-// Using Array.filter() -
+// Using Array.filter()
 function authorFilter(section) {
-    return authors.filter((author) => {
-        return author.sections.indexOf(section) >= 0;
-    }).map((author) => {
-        return author.name;
+  return authors
+    .filter(author => {
+      return author.sections.indexOf(section) >= 0;
     })
+    .map(author => {
+      return author.name;
+    });
 }
-console.log('\n----Filtering----');
+console.log("\n----Filtering----");
 console.log(authors);
-console.log() - ;
-console.log(`Who writes for business > ${whoWritesFor('business')}`);
-console.log(`Who writes for advertising > ${whoWritesFor('advertising')}`);
-console.log(`Who writes for technology > ${authorFilter('technology')}`);
+console.log();
+console.log(`Who writes for business > ${whoWritesFor("business")}`);
+console.log(`Who writes for advertising > ${whoWritesFor("advertising")}`);
+console.log(`Who writes for technology > ${authorFilter("technology")}`);
 
-// Arrays.map() -
+// Deleting an element in the array
+
+function deleteAuthor(params) {
+  let index = 0;
+  authors.forEach(author => {
+    if (author.name === params) {
+      console.log(authors.splice(index, 1));
+    }
+    index++;
+  });
+}
+console.log("After deleting...");
+deleteAuthor("Jack");
+console.log(authors);
+
+// Arrays.map()
 // map function was introduced in es6
 // map returns a new array
 
-var color = [
-    'green',
-    'yellow',
-    'blue',
-    'red'
-];
+var color = ["green", "yellow", "blue", "red"];
 
-console.log('\nColors in the array are:');
+console.log("\nColors in the array are:");
 color.map(color => {
-    console.log(`- ${color.toUpperCase() -}`);
-})
-
+  console.log(`- ${color.toUpperCase()}`);
+});
 
 // forEach
 var donuts = ["jelly donut", "chocolate donut", "glazed donut"];
 
-donuts.forEach(function (donut) {
-    donut += " hole";
-    donut = donut.toUpperCase();
-    console.log(donut);
+donuts.forEach(function(donut) {
+  donut += " hole";
+  donut = donut.toUpperCase();
+  console.log(donut);
 });
 
 /*
@@ -171,8 +183,8 @@ you can call them whatever you like but let's use the names element, index and a
 */
 
 words = ["cat", "in", "hat"];
-words.forEach(function (word, num, all) {
-    console.log("Word " + num + " in " + all.toString() + " is " + word);
+words.forEach(function(word, num, all) {
+  console.log("Word " + num + " in " + all.toString() + " is " + word);
 });
 
 /*
@@ -186,10 +198,10 @@ and return a new array.
 - The map() method accepts one argument, a function that will be used to manipulate each element in the array.
 */
 
-var improvedDonuts = donuts.map(function (donut) {
-    donut += " hole";
-    donut = donut.toUpperCase();
-    return donut;
+var improvedDonuts = donuts.map(function(donut) {
+  donut += " hole";
+  donut = donut.toUpperCase();
+  return donut;
 });
 
 var someArry = [];
@@ -197,6 +209,11 @@ someArry[10] = 1;
 someArry[1] = 10;
 console.log(someArry[0]);
 console.log(someArry[1]);
-someArry.forEach(function (value, index) {
-    console.log(index + ":" + value);
+someArry.forEach(function(value, index) {
+  console.log(index + ":" + value);
 });
+
+// DETECTING AN ARRAY
+console.log(`Is someArry an array? ${someArry instanceof Array}`);
+var someVar = "";
+console.log(`Is someVar an array? ${someVar instanceof Array}`);
