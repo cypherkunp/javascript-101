@@ -14,7 +14,7 @@ Objects are not iterable, by default.
 const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 for (const digit of digits) {
-    console.log(digit);
+  console.log(digit);
 }
 
 /*
@@ -25,31 +25,38 @@ name when referencing individual values in the collection.
 For example, for (const button of buttons) {...}.
 */
 
-console.log('Printing Even numbers: ');
+console.log("Printing Even numbers: ");
 
 for (const digit of digits) {
-    if (digit%2 !== 0) {
-        continue;
-    }
-    console.log(digit);
+  if (digit % 2 !== 0) {
+    continue;
+  }
+  console.log(digit);
 }
 
-Array.prototype.decimalfy = function () {
-    for (i = 0; i < this.length; i++) {
-        this[i] = this[i].toFixed(2);
-    }
+Array.prototype.decimalfy = function() {
+  for (i = 0; i < this.length; i++) {
+    this[i] = this[i].toFixed(2);
+  }
 };
-console.log('After adding another property to the prototype of Array');
+console.log("After adding another property to the prototype of Array");
 
 for (const digit of digits) {
-    console.log(digit);
+  console.log(digit);
 }
 
 // for..of with STRING ARRAY
 
-const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+const days = [
+  "sunday",
+  "monday",
+  "tuesday",
+  "wednesday",
+  "thursday",
+  "friday",
+  "saturday"
+];
 
-for (const iterator in days) {
-    day = days[iterator];
-    console.log(day.charAt(0).toUpperCase() + day.slice(1));
+for (const day of days) {
+  console.log(day.charAt(0).toUpperCase() + day.slice(1));
 }

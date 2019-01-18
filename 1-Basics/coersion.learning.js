@@ -3,7 +3,7 @@
 var a = "42";
 var b = Number(a);
 
-console.log('__Explicit__')
+console.log("__Explicit__");
 console.log(`a: ${typeof a} `); // "42"
 console.log(`b: ${typeof b}`); // 42--the number!
 console.log();
@@ -13,6 +13,10 @@ console.log();
 var a = "42";
 var b = a * 1; // "42" implicitly coerced to 42 here
 
-console.log('__Implicit__')
+console.log("__Implicit__");
 console.log(`a: ${typeof a} `); // "42"
 console.log(`b: ${typeof b}`); // 42--the number!
+
+console.log();
+console.log("is a == 42 ?", a == 42);
+console.log("is true == 'true'?", a == 42);
