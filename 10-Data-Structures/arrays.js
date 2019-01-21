@@ -217,3 +217,29 @@ someArry.forEach(function(value, index) {
 console.log(`Is someArry an array? ${someArry instanceof Array}`);
 var someVar = "";
 console.log(`Is someVar an array? ${someVar instanceof Array}`);
+
+// SORTING AN ARRAY
+/**
+ * By default, sort() converts every item in an array to a string and then
+  performs a comparison. That means you can’t accurately sort an array
+  of numbers without specifying a comparison function.
+ */
+
+var numArray = [1, 3, 2, 5, 4, 7, 8, 665, 99, 345];
+var strArray = ["hi", "hello", "bye", "hastalavista", "sayonara", "namastey"];
+
+console.log("Sorting the number array (default): ", numArray.sort()); //[ 1, 2, 3, 345, 4, 5, 665, 7, 8, 99 ]
+
+numArray.sort((first, second) => first - second);
+console.log("Sorting the number array in ascending order: ", numArray); //[ 1, 2, 3, 4, 5, 7, 8, 99, 345, 665 ]
+
+numArray.sort((first, second) => second - first);
+console.log("Sorting the number array in descending order: ", numArray); //[ 665, 345, 99, 8, 7, 5, 4, 3, 2, 1 ]
+
+console.log("Sorting the string array (default): ", strArray.sort()); //[ 'bye', 'hastalavista', 'hello', 'hi', 'namastey', 'sayonara' ]
+
+strArray.sort((first, second) => first > second);
+console.log("Sorting the string array in ascending order: ", strArray); //[ 'bye', 'hastalavista', 'hello', 'hi', 'namastey', 'sayonara' ]
+
+strArray.sort((first, second) => first < second);
+console.log("Sorting the string array in descending order: ", strArray); //
