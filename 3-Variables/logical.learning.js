@@ -23,3 +23,6 @@ console.log(`NaN || z :`, finalEval);
 
 finalEval = {} || z; // {}
 console.log(`{} || z :`, finalEval);
+
+finalEval = null && {}; // null
+console.log(`null && {} :`, finalEval);
