@@ -8,10 +8,10 @@
 
 //  Let’s take a look at both examples rewritten using destructuring.
 
-const point = [10, 25, -34];
+const point = [10, 25, -34, 4, 6, 7];
 
-const [x, y, z] = point;
-console.log('ES6 way > ', x, y, z);
+const [x, y, z, ...rest] = point;
+console.log('ES6 way > ', x, y, z, '| rest >', rest);
 
 /*
 TIP: You can also ignore values when destructuring arrays.
@@ -30,9 +30,9 @@ console.log('ES5 way > ', xES5, yES5, zES5);
 
 // Destructuring values from an object
 const gemstone = {
-    type: 'quartz',
-    color: 'rose',
-    carat: 21.29
+  type: 'quartz',
+  color: 'rose',
+  carat: 21.29
 };
 
 const { type, color, carat } = gemstone;
@@ -46,14 +46,14 @@ For example, let {color} = gemstone; will only select the color property from th
 
 // quiz What will be the output of getArea()
 const circle = {
-    radius: 10,
-    color: 'orange',
-    getArea: function () {
-        return Math.PI * this.radius * this.radius;
-    },
-    getCircumference: function () {
-        return 2 * Math.PI * this.radius;
-    }
+  radius: 10,
+  color: 'orange',
+  getArea: function() {
+    return Math.PI * this.radius * this.radius;
+  },
+  getCircumference: function() {
+    return 2 * Math.PI * this.radius;
+  }
 };
 
 let { radius, getArea, getCircumference } = circle;
