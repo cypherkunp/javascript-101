@@ -1,4 +1,4 @@
-let httpStatusCodes = {
+const httpStatusCodes = {
   success: {
     OK: 200,
     CREATED: 201,

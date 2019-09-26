@@ -35,9 +35,15 @@ console.log(average());
 
 // using reduce
 
-function multiply(...params) {
-    return params.reduce((previous, current) => previous * current);
+function multiply() {
+    return [...arguments].reduce((previous, current) => previous * current);
 }
 
 console.log(multiply(1, 2, 4, 5));
 console.log(multiply(2, 4, 6));
+
+// using arrow functions
+
+const arrowMultiply = (...params) => params.reduce((prev, current) => prev * current);
+console.log(arrowMultiply(1, 2));
+console.log(arrowMultiply(2, 10));
