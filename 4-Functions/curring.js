@@ -1,7 +1,7 @@
 function sum() {
     let total = 0;
 
-    function f(y) {
+    function f(y = 0) {
         total += y;
         return f;
     }
@@ -14,7 +14,7 @@ function sum() {
 }
 
 const sumIt = sum();
-
+console.log(+sumIt());
 console.log(+sumIt(1)); // 1
 console.log(+sumIt(1)(2)); // 4
 console.log(+sumIt(1)(2)(3)); // 10
