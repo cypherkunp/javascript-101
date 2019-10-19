@@ -1,0 +1,4 @@
+{
+    "RequirementDocument": "/field/collection/requirementDocumentFields.json",
+    "TestDocument": "/field/collection/testDocumentFields.json"
+}

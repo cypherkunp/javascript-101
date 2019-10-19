@@ -1,0 +1,5 @@
+{
+    "ID": { "identifier": "dcterms:identifier" },
+    "DocumentTitle": { "identifier": "dcterms:title" },
+    "Type": { "identifier": "oslc:shortTitle" }
+}

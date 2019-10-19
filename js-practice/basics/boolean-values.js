@@ -1,0 +1,12 @@
+let value = null;
+console.log(!!value);
+value = undefined;
+console.log(!!value);
+value = '';
+console.log(!!value);
+value = 'Hello';
+console.log(!!value);
+value = true;
+console.log(!!value);
+value = false;
+console.log(!!value);

@@ -1,0 +1,10 @@
+{
+    "Text": { "identifier": "dcterms:description" },
+    "ID": { "identifier": "dcterms:identifier" },
+    "LiveItemID": { "identifier": "dcterms:title" },
+    "Section": { "identifier": "oslc:shortTitle" },
+    "IncomingOSLCLink": { "identifier": "oslc_rm:elaboratedBy" },
+    "ModifiedDate": { "identifier": "dcterms:modified" },
+    "CreatedDate": { "identifier": "dcterms:created" },
+    "Type": { "identifier": "dcterms:subject" }
+}
